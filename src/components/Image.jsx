@@ -38,7 +38,7 @@ const Image = ({
   marginTop,
   marginBottom,
   ...props
-}: IImageProps) => {
+}) => {
   const {colors, sizes} = useTheme();
 
   const imageStyles = StyleSheet.flatten([
@@ -81,7 +81,7 @@ const Image = ({
         overflow: 'hidden',
       }),
     },
-  ]) as ImageStyle;
+  ]);
 
   // generate component testID or accessibilityLabel based on Platform.OS
   const imageID =

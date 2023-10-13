@@ -12,9 +12,8 @@ import {LinearGradient} from 'expo-linear-gradient';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 import useTheme from '../hooks/useTheme';
-import {IBlockProps} from '../constants/types';
 
-const Block = (props: IBlockProps) => {
+const Block = (props) => {
   const {
     id = 'Block',
     children,
@@ -165,7 +164,7 @@ const Block = (props: IBlockProps) => {
       ...(top !== undefined && {top}),
       ...(bottom !== undefined && {bottom}),
     },
-  ]) as ViewStyle;
+  ]);
 
   // generate component testID or accessibilityLabel based on Platform.OS
   const blockID =

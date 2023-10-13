@@ -11,7 +11,6 @@ import {Ionicons} from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 
 import useTheme from '../hooks/useTheme';
-import {IButtonProps} from '../constants/types';
 
 const Button = ({
   id = 'Button',
@@ -69,7 +68,7 @@ const Button = ({
   vibrateRepeat,
   onPress,
   ...props
-}: IButtonProps) => {
+}) => {
   const {colors, sizes} = useTheme();
   const colorIndex = primary
     ? 'primary'
@@ -166,7 +165,7 @@ const Button = ({
       ...(top !== undefined && {top}),
       ...(bottom !== undefined && {bottom}),
     },
-  ]) as ViewStyle;
+  ]);
 
   /* handle onPress event */
   const handlePress = useCallback(
@@ -207,7 +206,7 @@ const Button = ({
       width: '100%',
       ...(round && {maxWidth: buttonStyles.maxWidth}),
     },
-  ]) as ViewStyle;
+  ]);
 
   // generate component testID or accessibilityLabel based on Platform.OS
   const buttonID =
